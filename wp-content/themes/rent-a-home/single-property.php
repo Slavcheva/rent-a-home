@@ -7,7 +7,7 @@
 
 <!--		--><?php //echo rent_a_home_display_other_jobs_per_location( get_the_ID() ); ?>
 
-		<?php rent_a_home_update_property_views_count( get_the_ID() ); ?>
+<!--		--><?php //rent_a_home_update_property_views_count( get_the_ID() ); ?>
 	<?php endwhile; ?>
 
 <?php endif; ?>

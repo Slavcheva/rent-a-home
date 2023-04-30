@@ -15,3 +15,4 @@
 * Domain Path:       /languages
 */
 require 'cpt-properties.php';
+require 'functions.php';
