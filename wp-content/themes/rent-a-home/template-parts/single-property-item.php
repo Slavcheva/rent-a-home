@@ -8,10 +8,10 @@
                         <span class="meta-date">Job visits: <?php echo get_post_meta( get_the_ID(), 'views_count', true ); ?></span>
 
                         <div class="property-meta">
-                            <!--                            <span class="meta-location">-->
-							<?php //echo rent_a_home_display_single_term( get_the_ID(), 'location' ); ?><!--</span>-->
+                                                        <span class="meta-location">
+							<?php echo rent_a_home_display_single_term( get_the_ID(), 'location' ); ?></span>
                             <span class="meta-total-area">
-							<?php //echo rent_a_home_display_single_term( get_the_ID(), 'price' ); ?><!--</span>-->
+							<?php echo rent_a_home_display_single_term( get_the_ID(), 'price' ); ?></span>
                         </div>
 
                         <div class="property-details grid">
