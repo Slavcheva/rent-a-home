@@ -12,3 +12,17 @@ function rent_a_home_assets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'rent_a_home_assets' );
+
+/**
+ *   Function takes care of custom menu
+ *
+ * @return void
+ */
+function rent_a_home_register_nav_menu() {
+	register_nav_menus( array(
+		'primary_menu' => __( 'Primary Menu', 'rent-a-home' ),
+		'footer_menu'  => __( 'Footer Menu', 'rent-a-home' ),
+	) );
+}
+
+add_action( 'after_setup_theme', 'rent_a_home_register_nav_menu', 0 );
