@@ -125,7 +125,7 @@ function rent_a_home_price_taxonomy() {
 		'menu_name'         => __( 'Price', 'rent-a-home' ),
 	);
 	$args = array(
-		'hierarchical'      => false,
+		'hierarchical'      => true,
 		'labels'            => $labels,
 		'show_ui'           => true,
 		'show_admin_column' => true,
