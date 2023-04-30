@@ -14,4 +14,4 @@
 * Text Domain:       rent-a-home
 * Domain Path:       /languages
 */
-require 'cpt-homes.php';
+require 'cpt-properties.php';
