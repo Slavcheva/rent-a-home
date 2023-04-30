@@ -73,3 +73,66 @@ function rent_a_home_location_taxonomy() {
 }
 add_action( 'init', 'rent_a_home_location_taxonomy');
 
+/**
+ * Register a 'area' taxonomy for post type 'property', with a rewrite to match property CPT slug.
+ *
+ * @see register_post_type for registering post types.
+ */
+function rent_a_home_area_taxonomy() {
+	$labels = array(
+		'name'              => _x( 'Areas', 'taxonomy general name', 'rent-a-home' ),
+		'singular_name'     => _x( 'Area', 'taxonomy singular name', 'rent-a-home' ),
+		'search_items'      => __( 'Search Areas', 'rent-a-home' ),
+		'all_items'         => __( 'All Areas', 'rent-a-home' ),
+		'parent_item'       => __( 'Parent Area', 'rent-a-home' ),
+		'parent_item_colon' => __( 'Parent Area:', 'rent-a-home' ),
+		'edit_item'         => __( 'Edit Area', 'rent-a-home' ),
+		'update_item'       => __( 'Update Area', 'rent-a-home' ),
+		'add_new_item'      => __( 'Add New Area', 'rent-a-home' ),
+		'new_item_name'     => __( 'New Area Name', 'rent-a-home' ),
+		'menu_name'         => __( 'Area', 'rent-a-home' ),
+	);
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'show_in_rest'       => true,
+	);
+
+	register_taxonomy( 'area', 'property',$args );
+}
+add_action( 'init', 'rent_a_home_area_taxonomy');
+
+/**
+ * Register a 'price' taxonomy for post type 'property', with a rewrite to match property CPT slug.
+ *
+ * @see register_post_type for registering post types.
+ */
+function rent_a_home_price_taxonomy() {
+	$labels = array(
+		'name'              => _x( 'Prices', 'taxonomy general name', 'rent-a-home' ),
+		'singular_name'     => _x( 'Price', 'taxonomy singular name', 'rent-a-home' ),
+		'search_items'      => __( 'Search Prices', 'rent-a-home' ),
+		'all_items'         => __( 'All Prices', 'rent-a-home' ),
+		'parent_item'       => __( 'Parent Price', 'rent-a-home' ),
+		'parent_item_colon' => __( 'Parent Price:', 'rent-a-home' ),
+		'edit_item'         => __( 'Edit Price', 'rent-a-home' ),
+		'update_item'       => __( 'Update Price', 'rent-a-home' ),
+		'add_new_item'      => __( 'Add New Price', 'rent-a-home' ),
+		'new_item_name'     => __( 'New Price Name', 'rent-a-home' ),
+		'menu_name'         => __( 'Price', 'rent-a-home' ),
+	);
+	$args = array(
+		'hierarchical'      => false,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'show_in_rest'       => true,
+	);
+
+	register_taxonomy( 'price', 'property',$args );
+}
+add_action( 'init', 'rent_a_home_price_taxonomy');
